@@ -1,0 +1,33 @@
+package com.example.studentapp.service;
+
+import com.example.studentapp.model.TaskModel;
+import com.example.studentapp.repository.TaskRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class TaskService {
+
+    @Autowired
+    private TaskRepository taskRepository;
+
+    public TaskModel saveTask(TaskModel task) {
+        return taskRepository.save(task);
+    }
+
+    public List<TaskModel> getAllTasks() {
+        return taskRepository.findAll();
+    }
+
+    public Optional<TaskModel> getTaskById(Long id) {
+        return taskRepository.findById(id);
+    }
+
+    public void deleteTask(Long id) {
+        taskRepository.deleteById(id);
+    }
+
+}
