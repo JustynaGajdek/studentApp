@@ -30,4 +30,9 @@ public class TaskService {
         taskRepository.deleteById(id);
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ba92201 (poprawki w TaskRepository)
 }

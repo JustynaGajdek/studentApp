@@ -7,7 +7,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface StudentRepository extends JpaRepository<StudentModel, Long> {
 
+<<<<<<< HEAD
     // TODO metody, query
+=======
+>>>>>>> ba92201 (poprawki w TaskRepository)
 
 
 
